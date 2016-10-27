@@ -28,9 +28,9 @@ class BlogNews extends \Suki\Ohara
 
 	}
 
-	public function scheduled()
+	public function scheduledTask()
 	{
-
+		global $smcFunc;
 	}
 
 	protected function postNews()
