@@ -23,6 +23,21 @@ class BlogNews extends \Suki\Ohara
 		$this->setRegistry();
 	}
 
+	public function addSettings()
+	{
+
+	}
+
+	public function scheduled()
+	{
+
+	}
+
+	protected function postNews()
+	{
+
+	}
+
 	protected function between($string, $start, $end)
 	{
 		$string = ' ' . $string;
