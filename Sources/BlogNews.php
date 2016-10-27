@@ -22,4 +22,18 @@ class BlogNews extends \Suki\Ohara
 	{
 		$this->setRegistry();
 	}
+
+	protected function between($string, $start, $end)
+	{
+		$string = ' ' . $string;
+		$ini = mb_strpos($string, $start);
+
+		if ($ini == 0)
+			return '';
+
+		$ini += mb_strlen($start);
+		$len = mb_strpos($string, $end, $ini) - $ini;
+
+		return mb_substr($string, $ini, $len);
+	}
 }
