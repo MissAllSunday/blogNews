@@ -1,0 +1,6 @@
+{
+	"name": "suki/blognews",
+	"require": {
+		"suki/ohara": "dev-master"
+	}
+}
