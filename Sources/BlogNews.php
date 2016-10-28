@@ -11,6 +11,9 @@
 if (!defined('SMF'))
 	die('No direct access...');
 
+// Ohara autoload!
+require_once $sourcedir .'/ohara/src/Suki/autoload.php';
+
 use Suki\Ohara;
 
 class BlogNews extends \Suki\Ohara
@@ -18,10 +21,8 @@ class BlogNews extends \Suki\Ohara
 	public $name = __CLASS__;
 	public $useConfig = true;
 
-	public function __construct($_app)
+	public function __construct()
 	{
-		$this->_app = $_app;
-
 		$this->setRegistry();
 	}
 
@@ -68,7 +69,10 @@ class BlogNews extends \Suki\Ohara
 	protected function getNews()
 	{
 		// Get the file.
-		$file = $this->setting('file', '');
+		$file = $this['tools']->parser($this->setting('file', ''), array(
+			'boarddir' => $this->boardDir,
+			'sourcedir' => $this->sourceDir,
+		));
 
 		if (!file_exists($file) || is_writable($file))
 			return false;

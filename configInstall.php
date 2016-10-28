@@ -22,7 +22,7 @@ $_config = array(
 	'_availableHooks' => array(
 		'simpleSettings' => 'integrate_general_mod_settings',
 	),
-	'simpleSettings' => array(
+	'_simpleSettings' => array(
 		'title',
 		array('type' => 'check', 'name' => 'master'),
 		array('type' => 'text', 'name' => 'file'),
