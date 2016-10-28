@@ -10,4 +10,14 @@
 
 global $txt;
 
+$txt['BlogNews_title'] = 'Blog News';
+$txt['BlogNews_master'] = 'Enable the blog news mod';
+$txt['BlogNews_file'] = 'The path to the XML file';
+$txt['BlogNews_file_sub'] = 'The following tokesn can be used:<br>- {boarddir}<br>- {sourcedir}';
+$txt['BlogNews_board'] = 'The board wehre the message will be posted.';
+$txt['BlogNews_poster'] = 'The ID of the message\'s poster.';
+$txt['BlogNews_'] = '';
+$txt['BlogNews_'] = '';
+$txt['BlogNews_'] = '';
+$txt['BlogNews_'] = '';
 $txt['BlogNews_'] = '';
