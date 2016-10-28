@@ -24,11 +24,13 @@ $_config = array(
 	),
 	'simpleSettings' => array(
 		'title',
-		array('type' => 'check', 'name' => 'enable'),
-		array('type' => 'check', 'name' => 'file'),
-		array('type' => 'check', 'name' => 'token_post'),
-		array('type' => 'check', 'name' => 'token_title'),
-		array('type' => 'check', 'name' => 'token_message'),
+		array('type' => 'check', 'name' => 'master'),
+		array('type' => 'text', 'name' => 'file'),
+		array('type' => 'text', 'name' => 'token_post'),
+		array('type' => 'text', 'name' => 'token_title'),
+		array('type' => 'text', 'name' => 'token_message'),
+		array('type' => 'int', 'name' => 'board'),
+		array('type' => 'int', 'name' => 'poster'),
 		'',
 	),
 );
