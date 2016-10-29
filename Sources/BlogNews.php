@@ -32,7 +32,7 @@ class BlogNews extends \Suki\Ohara
 
 		// Mod is disabled.
 		if(!$this->enable('master'))
-			return;
+			return true;
 
 		// Get the needed data!
 		$news = $this->getNews();
@@ -74,7 +74,7 @@ class BlogNews extends \Suki\Ohara
 			'sourcedir' => $this->sourceDir,
 		));
 
-		if (!file_exists($file) || is_writable($file))
+		if (!file_exists($file) || !is_writable($file))
 			return false;
 
 		$news = array();
